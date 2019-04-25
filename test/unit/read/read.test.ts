@@ -7,7 +7,7 @@
 
 import { expect } from "chai";
 import * as Chance from "chance";
-import { readConfig } from "../../../src";
+import { readConfig } from "../../../src/config/read";
 
 describe('Given [Read] helper method', (): void => {
 
@@ -15,7 +15,7 @@ describe('Given [Read] helper method', (): void => {
 
     it('should be able to read config file', (): void => {
 
-        const config = readConfig();
+        const config = readConfig(null as any);
 
         expect(config).to.be.instanceOf(Object);
     });

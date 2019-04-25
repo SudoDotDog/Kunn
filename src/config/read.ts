@@ -6,7 +6,7 @@
 
 import { KunnConfig } from "../declare/kunn";
 
-export const parseConfiguration = (config: KunnConfig): KunnConfig => {
+export const readConfig = (path: string): KunnConfig => {
 
-    return config;
+    return {} as any;
 };
