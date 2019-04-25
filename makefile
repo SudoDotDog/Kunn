@@ -9,7 +9,10 @@ mocha := node_modules/.bin/mocha
 
 .IGNORE: clean-linux
 
-main: dev
+main: run
+
+run:
+	@node example/test.js
 
 dev:
 	@echo "[INFO] Building for development"
