@@ -1,0 +1,22 @@
+{
+  "name": "kunn",
+  "version": "0.0.0",
+  "description": ":dolphin: API gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudoDotDog/Kunn.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SudoDotDog/Kunn/issues"
+  },
+  "homepage": "https://github.com/SudoDotDog/Kunn#readme"
+}
