@@ -4,6 +4,6 @@
  * @description Index
  */
 
+export * from "./config/import";
 export * from "./declare/import";
-export * from "./read/import";
 

@@ -4,7 +4,14 @@
         {
             "path": "/test",
             "protocol": "GET",
-            "request": {}
+            "request": {
+                "query": {
+                    "info": "STRING"
+                },
+                "response": {
+                    "hello": "STRING"
+                }
+            }
         }
     ]
 }
