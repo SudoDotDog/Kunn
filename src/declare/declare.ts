@@ -4,12 +4,6 @@
  * @description Declare
  */
 
-export enum CONFIG_TYPE {
-
-    ROOT = 'ROOT',
-    CHUNK = 'CHUNK',
-}
-
 export enum PROTOCOL {
 
     GET = 'GET',
