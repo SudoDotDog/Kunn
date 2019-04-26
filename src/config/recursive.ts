@@ -4,10 +4,11 @@
  * @description Recursive
  */
 
-import { readTextFile } from "@sudoo/io";
 import { _Json } from "@sudoo/bark/json";
 import { _Map } from "@sudoo/bark/map";
+import { readTextFile } from "@sudoo/io";
 
+// tslint:disable-next-line: ban-types
 const isObject = (element: any): element is Object => (element !== null && typeof element === 'object');
 
 export const recursiveRead = async (path: string, depth: number = 0, maxDepth: number = 15): Promise<any> => {
@@ -25,14 +26,14 @@ export const recursiveParse = async (parsed: any, depth: number = 0, maxDepth: n
         return parsed.map(async (element: any) => {
             if (typeof element === 'string' && element.match(/$\$ref:.+/)) {
                 const targetPath: string = element.replace('$ref:', '');
-                const replacement: Array<any> = await recursiveRead(targetPath);
+                const replacement: any[] = await recursiveRead(targetPath);
 
                 if (Array.isArray(replacement)) {
                     return replacement;
                 }
             }
             return element;
-        })
+        });
     } else if (isObject(parsed)) {
 
         const keys: string[] = _Map.keys(parsed);
@@ -49,7 +50,7 @@ export const recursiveParse = async (parsed: any, depth: number = 0, maxDepth: n
             }
             return {
                 ...previous,
-                [current]: parent[current],
+                [current]: parsed[current],
             };
         }, {} as Record<any, any>);
     }
