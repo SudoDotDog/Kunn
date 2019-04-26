@@ -26,7 +26,7 @@ export const recursiveParse = async (parsed: any, depth: number = 0, maxDepth: n
         return parsed.map(async (element: any) => {
             if (typeof element === 'string' && element.match(/$\$ref:.+/)) {
                 const targetPath: string = element.replace('$ref:', '');
-                const replacement: any[] = await recursiveRead(targetPath);
+                const replacement: any[] = await recursiveRead(targetPath, depth + 1, maxDepth);
 
                 if (Array.isArray(replacement)) {
                     return replacement;
@@ -42,7 +42,7 @@ export const recursiveParse = async (parsed: any, depth: number = 0, maxDepth: n
 
             if (current === '$ref') {
 
-                const replacement: Record<any, any> = await recursiveRead(parsed[current]);
+                const replacement: Record<any, any> = await recursiveRead(parsed[current], depth + 1, maxDepth);
                 if (isObject(replacement)) {
                     return { ...previous, ...replacement };
                 }
