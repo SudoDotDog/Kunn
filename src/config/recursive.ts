@@ -6,6 +6,7 @@
 
 import { _Json } from "@sudoo/bark/json";
 import { _Map } from "@sudoo/bark/map";
+import { _Mutate } from "@sudoo/bark/mutate";
 import { readTextFile } from "@sudoo/io";
 
 // tslint:disable-next-line: ban-types
@@ -23,7 +24,7 @@ export const recursiveParse = async (parsed: any, depth: number = 0, maxDepth: n
 
     if (Array.isArray(parsed)) {
 
-        return parsed.map(async (element: any) => {
+        return _Mutate.asyncMap(parsed, async (element: any) => {
             if (typeof element === 'string' && element.match(/$\$ref:.+/)) {
                 const targetPath: string = element.replace('$ref:', '');
                 const replacement: any[] = await recursiveRead(targetPath, depth + 1, maxDepth);
@@ -38,7 +39,7 @@ export const recursiveParse = async (parsed: any, depth: number = 0, maxDepth: n
 
         const keys: string[] = _Map.keys(parsed);
 
-        return keys.reduce(async (previous: Record<any, any>, current: string) => {
+        return _Mutate.asyncReduce(keys, async (previous: Record<any, any>, current: string) => {
 
             if (current === '$ref') {
 
