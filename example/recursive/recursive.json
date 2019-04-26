@@ -1,1 +1,12 @@
-{}
+{
+    "hello": "world",
+    "$ref": "./sub.json",
+    "test": [
+        "test",
+        "$ref:./subArray.json",
+        {
+            "$ref": "./sub.json",
+            "something": "here"
+        }
+    ]
+}

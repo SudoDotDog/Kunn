@@ -8,6 +8,7 @@ import { _Json } from "@sudoo/bark/json";
 import { _Map } from "@sudoo/bark/map";
 import { _Mutate } from "@sudoo/bark/mutate";
 import { readTextFile } from "@sudoo/io";
+import * as Path from "path";
 
 // tslint:disable-next-line: ban-types
 const isObject = (element: any): element is Object => (element !== null && typeof element === 'object');
@@ -17,23 +18,28 @@ export const recursiveRead = async (path: string, depth: number = 0, maxDepth: n
     const content: string = await readTextFile(path);
     const parsed: any = _Json.safeParse(content, new Error('failed'));
 
-    return await recursiveParse(parsed, depth + 1, maxDepth);
+    const rootPath: string = Path.parse(path).dir;
+
+    return await recursiveParse(parsed, rootPath, depth + 1, maxDepth);
 };
 
-export const recursiveParse = async (parsed: any, depth: number = 0, maxDepth: number = 15): Promise<any> => {
+export const recursiveParse = async (parsed: any, rootPath: string, depth: number = 0, maxDepth: number = 15): Promise<any> => {
 
     if (Array.isArray(parsed)) {
 
         return _Mutate.asyncMap(parsed, async (element: any) => {
-            if (typeof element === 'string' && element.match(/$\$ref:.+/)) {
+
+            if (typeof element === 'string' && /^\$ref:.+/.test(element)) {
+
                 const targetPath: string = element.replace('$ref:', '');
-                const replacement: any[] = await recursiveRead(targetPath, depth + 1, maxDepth);
+                const relativePath: string = Path.join(rootPath, targetPath);
+                const replacement: any[] = await recursiveRead(relativePath, depth + 1, maxDepth);
 
                 if (Array.isArray(replacement)) {
                     return replacement;
                 }
             }
-            return element;
+            return await recursiveParse(element, rootPath, depth, maxDepth);
         });
     } else if (isObject(parsed)) {
 
@@ -43,7 +49,9 @@ export const recursiveParse = async (parsed: any, depth: number = 0, maxDepth: n
 
             if (current === '$ref') {
 
-                const replacement: Record<any, any> = await recursiveRead(parsed[current], depth + 1, maxDepth);
+                const targetPath: string = parsed[current];
+                const relativePath: string = Path.join(rootPath, targetPath);
+                const replacement: Record<any, any> = await recursiveRead(relativePath, depth + 1, maxDepth);
                 if (isObject(replacement)) {
                     return { ...previous, ...replacement };
                 }
@@ -51,8 +59,10 @@ export const recursiveParse = async (parsed: any, depth: number = 0, maxDepth: n
             }
             return {
                 ...previous,
-                [current]: parsed[current],
+                [current]: await recursiveParse(parsed[current], rootPath, depth, maxDepth),
             };
         }, {} as Record<any, any>);
     }
+
+    return parsed;
 };
