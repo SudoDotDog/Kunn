@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/SudoDotDog/Kunn#readme",
   "dependencies": {
-    "@sudoo/bark": "^2.6.0",
+    "@sudoo/bark": "^2.6.1",
     "@sudoo/io": "^1.5.0",
     "connor": "^2.4.0"
   },

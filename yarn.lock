@@ -18,15 +18,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@sudoo/bark@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@sudoo/bark/-/bark-2.5.1.tgz#b898c0c302a2ccf8cb881a57f15474569b91cf32"
-  integrity sha512-vVkZtwRFbx5jtZzyZI8ZcdDEWYJN3H1Tb/PwzoxpPIf8KkzNftQL4VW+9tVfrNiw/MHyY92HWQDjKsY4WONQGQ==
-
-"@sudoo/bark@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@sudoo/bark/-/bark-2.6.0.tgz#233b05ab69448f6541cb57b9d54d28058c0037ce"
-  integrity sha512-2vEmP+x12cj+XOxqsh/WnTTL4gT/vRziyeltkllY3tTp1sygQv2XFKp8y3HyXGN+T3Li/AfaFXgvCfUR3rpoEA==
+"@sudoo/bark@^2.5.1", "@sudoo/bark@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@sudoo/bark/-/bark-2.6.1.tgz#04ec9a269c451abb7765915e2c710b0382e816fc"
+  integrity sha512-HTjzCNHqE6WFp9S4dhmAtWS7RE0UTV90EcnR6LM7X+SXCIjkBC0JhNhss8nptiT2sDTs76rRV4SCXs6QNExooQ==
 
 "@sudoo/io@^1.5.0":
   version "1.5.0"
@@ -74,9 +69,9 @@
   integrity sha512-1axi39YdtBI7z957vdqXI4Ac25e7YihYQtJa+Clnxg1zTJEaIRbndt71O3sP4GAMgiAm0pY26/b9BrY4MR/PMw==
 
 "@types/node@^11.13.4":
-  version "11.13.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.7.tgz#85dbb71c510442d00c0631f99dae957ce44fd104"
-  integrity sha512-suFHr6hcA9mp8vFrZTgrmqW2ZU3mbWsryQtQlY/QvwTISCw7nw/j+bCQPPohqmskhmqa5wLNuMHTTsc+xf1MQg==
+  version "11.13.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.8.tgz#e5d71173c95533be9842b2c798978f095f912aab"
+  integrity sha512-szA3x/3miL90ZJxUCzx9haNbK5/zmPieGraZEe4WI+3srN0eGLiT22NXeMHmyhNEopn+IrxqMc7wdVwvPl8meg==
 
 ansi-styles@^3.2.1:
   version "3.2.1"

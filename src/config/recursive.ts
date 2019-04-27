@@ -12,6 +12,7 @@ import * as Path from "path";
 
 // tslint:disable-next-line: ban-types
 const isObject = (element: any): element is Object => (element !== null && typeof element === 'object');
+const isRefString = (element: any): element is string => (typeof element === 'string' && /^\$ref:.+/.test(element));
 
 export const recursiveRead = async (path: string, depth: number = 0, maxDepth: number = 15): Promise<any> => {
 
@@ -27,9 +28,9 @@ export const recursiveParse = async (parsed: any, rootPath: string, depth: numbe
 
     if (Array.isArray(parsed)) {
 
-        return _Mutate.asyncMap(parsed, async (element: any) => {
+        return _Mutate.asyncFlatRebuild(parsed, async (element: any) => {
 
-            if (typeof element === 'string' && /^\$ref:.+/.test(element)) {
+            if (isRefString(element)) {
 
                 const targetPath: string = element.replace('$ref:', '');
                 const relativePath: string = Path.join(rootPath, targetPath);
