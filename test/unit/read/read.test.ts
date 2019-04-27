@@ -5,18 +5,35 @@
  * @override
  */
 
+import { Mock, Sandbox } from "@sudoo/mock";
 import { expect } from "chai";
 import * as Chance from "chance";
+import { KunnConfig } from "../../../src";
 import { readConfig } from "../../../src/config/read";
+import * as __Recursive from "../../../src/config/recursive";
 
 describe('Given [Read] helper method', (): void => {
 
     const chance: Chance.Chance = new Chance('read-read');
 
-    it('should be able to read config file', (): void => {
+    it('should be able to read config file', async (): Promise<void> => {
 
-        const config = readConfig(null as any);
+        const key: string = chance.string();
+        const value: string = chance.string();
 
-        expect(config).to.be.instanceOf(Object);
+        const stack = Sandbox.create();
+        const mock = Mock.create(__Recursive, 'recursiveRead');
+
+        mock.mock(stack.func({
+            [key]: value,
+        }));
+
+        const config: KunnConfig = await readConfig(chance.string());
+
+        mock.restore();
+
+        expect(config).to.be.deep.equal({
+            [key]: value,
+        });
     });
 });

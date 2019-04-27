@@ -25,6 +25,7 @@
     "connor": "^2.4.0"
   },
   "devDependencies": {
+    "@sudoo/mock": "^1.2.0",
     "@sudoo/triforce": "^1.6.0"
   }
 }
