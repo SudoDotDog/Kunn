@@ -5,12 +5,12 @@
  * @override
  */
 
+import * as __SudooIO from "@sudoo/io";
 import { Mock, Sandbox } from "@sudoo/mock";
 import { expect } from "chai";
 import * as Chance from "chance";
 import { KunnConfig } from "../../../src";
 import { readConfig } from "../../../src/config/read";
-import * as __Recursive from "../../../src/config/recursive";
 
 describe('Given [Read] helper method', (): void => {
 
@@ -22,7 +22,7 @@ describe('Given [Read] helper method', (): void => {
         const value: string = chance.string();
 
         const stack = Sandbox.create();
-        const mock = Mock.create(__Recursive, 'recursiveRead');
+        const mock = Mock.create(__SudooIO, 'recursiveRead');
 
         mock.mock(stack.func({
             [key]: value,
