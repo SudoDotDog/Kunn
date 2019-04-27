@@ -1,9 +1,7 @@
 {
     "version": 1,
-    "reference": [
-        "./sub/test.json"
-    ],
     "routes": [
+        "$ref:./sub/test.json",
         {
             "path": "/hello",
             "protocol": "GET",

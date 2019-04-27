@@ -1,17 +1,12 @@
-{
-    "version": 1,
-    "routes": [
-        {
-            "path": "/test",
-            "protocol": "GET",
-            "request": {
-                "query": {
-                    "info": "STRING"
-                },
-                "response": {
-                    "world": "STRING"
-                }
-            }
+[{
+    "path": "/test",
+    "protocol": "GET",
+    "request": {
+        "query": {
+            "info": "STRING"
+        },
+        "response": {
+            "world": "STRING"
         }
-    ]
-}
+    }
+}]

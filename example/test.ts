@@ -1,6 +1,10 @@
 import * as Path from "path";
-import { recursiveRead } from "../src/config/recursive";
+import { Kunn } from "../src";
 
 const currentPath = __dirname;
 
-recursiveRead(Path.join(currentPath, 'recursive', 'recursive.json')).then(console.log);
+(async () => {
+
+    const kunn: Kunn = await Kunn.fromPath(Path.join(currentPath, 'config.json'));
+    console.log(JSON.stringify(kunn.config, null, 2));
+})();

@@ -9,13 +9,20 @@ import { KunnConfig } from "./declare/kunn";
 
 export class Kunn {
 
-    public static fromPath(path: string): Kunn {
+    public static async fromPath(path: string): Promise<Kunn> {
 
-        const config: KunnConfig = readConfig(path);
-        return new Kunn();
+        const config: KunnConfig = await readConfig(path);
+        return new Kunn(config);
     }
 
-    private constructor() {
+    private readonly _config: KunnConfig;
 
+    private constructor(config: KunnConfig) {
+
+        this._config = config;
+    }
+
+    public get config(): KunnConfig {
+        return this._config;
     }
 }

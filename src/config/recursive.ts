@@ -1,6 +1,6 @@
 /**
  * @author WMXPY
- * @namespace Read
+ * @namespace Config
  * @description Recursive
  */
 
@@ -33,7 +33,7 @@ export const recursiveParse = async (parsed: any, rootPath: string, depth: numbe
 
             if (isRefString(element)) {
 
-                const targetPath: string = element.replace('$ref:', '');
+                const targetPath: string = element.replace('$ref:', '').trim();
                 const relativePath: string = Path.join(rootPath, targetPath);
                 const replacement: any[] = await recursiveRead(relativePath, depth + 1, maxDepth);
 
