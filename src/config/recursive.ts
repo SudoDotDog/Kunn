@@ -9,6 +9,7 @@ import { _Map } from "@sudoo/bark/map";
 import { _Mutate } from "@sudoo/bark/mutate";
 import { readTextFile } from "@sudoo/io";
 import * as Path from "path";
+import { ERROR_CODE, panic } from "../panic/panic";
 
 // tslint:disable-next-line: ban-types
 const isObject = (element: any): element is Object => (element !== null && typeof element === 'object');
@@ -17,7 +18,7 @@ const isRefString = (element: any): element is string => (typeof element === 'st
 export const recursiveRead = async (path: string, depth: number = 0, maxDepth: number = 15): Promise<any> => {
 
     const content: string = await readTextFile(path);
-    const parsed: any = _Json.safeParse(content, new Error('failed'));
+    const parsed: any = _Json.safeParse(content, panic.code(ERROR_CODE.JSON_PARSE_FAILED, content));
 
     const rootPath: string = Path.parse(path).dir;
 
@@ -56,7 +57,8 @@ export const recursiveParse = async (parsed: any, rootPath: string, depth: numbe
                 if (isObject(replacement)) {
                     return { ...previous, ...replacement };
                 }
-                throw new Error('not object');
+
+                throw panic.code(ERROR_CODE.OBJECT_REFERENCE_NOT_OBJECT, replacement);
             }
             return {
                 ...previous,
