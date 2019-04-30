@@ -7,6 +7,36 @@
 
 :dolphin: Interfacing, between people, between machine
 
+## Install
+
+```sh
+npm install kunn -g
+# OR
+yarn global add kunn
+```
+
+## Development
+
+```sh
+make install
+make link
+make dev
+# Linked environment path
+...kunn {...}
+```
+
+## Test
+
+```sh
+make tests
+```
+
+## Build
+
+```sh
+make build
+```
+
 ## Language Support Packages
 
 TypeScript `yarn add @kunn/typescript`

@@ -5,12 +5,12 @@
  * @override
  */
 
+import { Kunn } from "@kunn/core";
 import * as __SudooIO from "@sudoo/io";
 import { Mock, Sandbox } from "@sudoo/mock";
 import { expect } from "chai";
 import * as Chance from "chance";
-import { KunnConfig } from "../../../src";
-import { readConfig } from "../../../src/config/read";
+import { fromConfig } from "../../../src/config/read";
 
 describe('Given [Read] helper method', (): void => {
 
@@ -28,11 +28,11 @@ describe('Given [Read] helper method', (): void => {
             [key]: value,
         }));
 
-        const config: KunnConfig = await readConfig(chance.string());
+        const config: Kunn = await fromConfig(chance.string());
 
         mock.restore();
 
-        expect(config).to.be.deep.equal({
+        expect(config.config).to.be.deep.equal({
             [key]: value,
         });
     });
