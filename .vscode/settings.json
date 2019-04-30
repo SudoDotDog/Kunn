@@ -6,7 +6,8 @@
         "codecov",
         "connor",
         "kunn",
-        "sudoo"
+        "sudoo",
+        "triforce"
     ],
     "tslint.configFile": "typescript/tslint.json",
     "javascript.preferences.importModuleSpecifier": "auto",

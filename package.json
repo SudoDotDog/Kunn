@@ -1,11 +1,8 @@
 {
   "name": "kunn",
   "version": "0.0.0",
-  "description": ":dolphin: API gateway",
+  "description": ":dolphin: Interfacing, between people, between machine",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SudoDotDog/Kunn.git"
@@ -27,5 +24,23 @@
   "devDependencies": {
     "@sudoo/mock": "^1.2.0",
     "@sudoo/triforce": "^1.6.0"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "./src/**/*.ts"
+    ],
+    "instrument": true,
+    "reporter": [
+      "json",
+      "text-summary"
+    ],
+    "report-dir": "coverage",
+    "require": [
+      "./test/tshook.js"
+    ],
+    "sourceMap": true
   }
 }
