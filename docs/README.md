@@ -37,16 +37,6 @@ make tests
 make build
 ```
 
-## Language Support Packages
-
-TypeScript `yarn add @kunn/typescript`
-[![npm version](https://badge.fury.io/js/%40kunn%2Ftypescript.svg)](https://www.npmjs.com/package/@kunn/typescript)
-[![downloads](https://img.shields.io/npm/dm/@kunn/typescript.svg)](https://www.npmjs.com/package/@kunn/typescript)
-
-Go `yarn add @kunn/go`
-[![npm version](https://badge.fury.io/js/%40kunn%2Fgo.svg)](https://www.npmjs.com/package/@kunn/go)
-[![downloads](https://img.shields.io/npm/dm/@kunn/go.svg)](https://www.npmjs.com/package/@kunn/go)
-
 ## Submodule Package Status
 
 [Kunn-Core](https://github.com/SudoDotDog/Kunn-Core)
@@ -60,3 +50,5 @@ Go `yarn add @kunn/go`
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Kunn-Support.svg?branch=master)](https://travis-ci.com/SudoDotDog/Kunn-Support)
 [![codecov](https://codecov.io/gh/SudoDotDog/Kunn-Support/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/Kunn-Support)
+[![@kunn/go version](https://img.shields.io/npm/v/@kunn/go.svg?color=%2300ADD8&label=%40kunn%2Fgo&style=popout)](https://www.npmjs.com/package/@kunn/go)
+[![@kunn/typescript version](https://img.shields.io/npm/v/@kunn/typescript.svg?color=%23007ACC&label=%40kunn%2Ftypescript&style=popout)](https://www.npmjs.com/package/@kunn/typescript)
