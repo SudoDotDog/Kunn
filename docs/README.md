@@ -7,6 +7,16 @@
 
 :dolphin: Interfacing, between people, between machine
 
+## Language Support Packages
+
+TypeScript `yarn add @kunn/typescript`
+[![npm version](https://badge.fury.io/js/%40kunn%2Ftypescript.svg)](https://www.npmjs.com/package/@kunn/typescript)
+[![downloads](https://img.shields.io/npm/dm/@kunn/typescript.svg)](https://www.npmjs.com/package/@kunn/typescript)
+
+Go `yarn add @kunn/go`
+[![npm version](https://badge.fury.io/js/%40kunn%2Fgo.svg)](https://www.npmjs.com/package/@kunn/go)
+[![downloads](https://img.shields.io/npm/dm/@kunn/go.svg)](https://www.npmjs.com/package/@kunn/go)
+
 ## Submodule Package Status
 
 [Kunn-Core](https://github.com/SudoDotDog/Kunn-Core)
@@ -16,19 +26,7 @@
 [![npm version](https://badge.fury.io/js/%40kunn%2Fcore.svg)](https://www.npmjs.com/package/@kunn/core)
 [![downloads](https://img.shields.io/npm/dm/@kunn/core.svg)](https://www.npmjs.com/package/@kunn/core)
 
-## Language Support Package Status
-
 [Kunn-Support](https://github.com/SudoDotDog/Kunn-Support)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Kunn-Support.svg?branch=master)](https://travis-ci.com/SudoDotDog/Kunn-Support)
 [![codecov](https://codecov.io/gh/SudoDotDog/Kunn-Support/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/Kunn-Support)
-
-## Language Support Packages
-
-TypeScript
-[![npm version](https://badge.fury.io/js/%40kunn%2Ftypescript.svg)](https://www.npmjs.com/package/@kunn/typescript)
-[![downloads](https://img.shields.io/npm/dm/@kunn/typescript.svg)](https://www.npmjs.com/package/@kunn/typescript)
-
-Go
-[![npm version](https://badge.fury.io/js/%40kunn%2Ftypescript.svg)](https://www.npmjs.com/package/@kunn/typescript)
-[![downloads](https://img.shields.io/npm/dm/@kunn/typescript.svg)](https://www.npmjs.com/package/@kunn/typescript)
