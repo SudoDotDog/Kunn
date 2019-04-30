@@ -4,7 +4,7 @@
  * @description Index
  */
 
-import { Coco, createInfoCommand } from "@sudoo/coco";
+import { Coco, Command, createInfoCommand } from "@sudoo/coco";
 
 export const KunnCLI = async (args: string[]): Promise<void> => {
 
@@ -13,6 +13,7 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
         const coco: Coco = Coco.create();
 
         coco.command(createInfoCommand('help', coco, console.log));
+        coco.command(Command.create('hello'));
 
         await coco.go(args);
     } catch (error) {

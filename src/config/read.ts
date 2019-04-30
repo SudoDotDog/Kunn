@@ -6,7 +6,6 @@
 
 import { Kunn, KunnConfig } from "@kunn/core";
 import { recursiveRead } from "@sudoo/io";
-import { ERROR_CODE, panic } from "../panic/panic";
 
 export const fromConfig = async (path: string): Promise<Kunn> => {
 
