@@ -18,10 +18,41 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@sudoo/bark@^2.6.1":
+"@kunn/core@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@kunn/core/-/core-0.0.2.tgz#029f8e4b6077000652cd30dc780c77fdac74e3fc"
+  integrity sha512-WkhA9WDS0fSoptJZ6B5e7Pan+mt+rNjapJY7FQzYALcC9sURyss1oGgFi1uVMoHsffOIRY1fhj1ODALGtUa1Gw==
+  dependencies:
+    "@sudoo/bark" "^2.6.1"
+    chance "^1.0.18"
+    connor "^2.4.0"
+
+"@kunn/go@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@kunn/go/-/go-0.0.1.tgz#e8e7c674d6567c247347c6fe5c2f22141c143e20"
+  integrity sha512-nlLmSeJzWHbfqg8uyXw4bHyY3HOXi8TWRliMoA5EmNJz2QFFoxb5+6n1Vt8TmOtIux1GvSPi+Lk4NnSw56bqtg==
+  dependencies:
+    "@sudoo/bark" "^2.6.1"
+
+"@kunn/typescript@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@kunn/typescript/-/typescript-0.0.1.tgz#9e6b1549f5a19e7d028727466b5ddcab4ecd6902"
+  integrity sha512-Hm9NJt6eZwm4AnvwErTroAG9xLTQBqPsgMokfRtHY56Gqax8+uNEO7iKTICYj61aBWOHXfEdKK33+zMfA4lNew==
+  dependencies:
+    "@sudoo/bark" "^2.6.1"
+
+"@sudoo/bark@^2.5.1", "@sudoo/bark@^2.6.1":
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/@sudoo/bark/-/bark-2.6.1.tgz#04ec9a269c451abb7765915e2c710b0382e816fc"
   integrity sha512-HTjzCNHqE6WFp9S4dhmAtWS7RE0UTV90EcnR6LM7X+SXCIjkBC0JhNhss8nptiT2sDTs76rRV4SCXs6QNExooQ==
+
+"@sudoo/coco@^1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@sudoo/coco/-/coco-1.7.1.tgz#17290d85e6175523fa7c92a52b968c185a3df368"
+  integrity sha512-NVLSSkmVm0u459vIgPh7+1nYcIFVjfVAgcjt95V5RHFjKClOT6yhGGyCTjMF4KVKtPeYxo6l9kNWjaCWXId8WA==
+  dependencies:
+    "@sudoo/bark" "^2.5.1"
+    connor "^2.4.0"
 
 "@sudoo/io@^1.6.0":
   version "1.6.0"

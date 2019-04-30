@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/SudoDotDog/Kunn.git"
   },
+  "bin": {
+    "kunn": "bin/kunn-test"
+  },
   "keywords": [
     "API"
   ],
@@ -17,7 +20,11 @@
   },
   "homepage": "https://github.com/SudoDotDog/Kunn#readme",
   "dependencies": {
+    "@kunn/core": "^0.0.2",
+    "@kunn/go": "^0.0.1",
+    "@kunn/typescript": "^0.0.1",
     "@sudoo/bark": "^2.6.1",
+    "@sudoo/coco": "^1.7.1",
     "@sudoo/io": "^1.6.0",
     "connor": "^2.4.0"
   },

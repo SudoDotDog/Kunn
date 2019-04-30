@@ -57,3 +57,11 @@ clean-linux:
 publish: install tests license build
 	@echo "[INFO] Publishing package"
 	@cd app && npm publish --access=public
+
+link:
+	@echo "[INFO] Linking executable"
+	@npm link --no-shrinkwrap
+
+unlink:
+	@echo "[INFO] Linking executable"
+	@npm unlink --no-shrinkwrap

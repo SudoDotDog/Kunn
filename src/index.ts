@@ -4,10 +4,22 @@
  * @description Index
  */
 
-import { Kunn } from "./kunn";
+import { Coco, createInfoCommand } from "@sudoo/coco";
 
-export * from "./declare/import";
-export { Kunn };
+export const KunnCLI = async (args: string[]): Promise<void> => {
 
-export default Kunn;
+    try {
+
+        const coco: Coco = Coco.create();
+
+        coco.command(createInfoCommand('help', coco, console.log));
+
+        await coco.go(args);
+    } catch (error) {
+
+        console.log(error);
+    }
+};
+
+export default KunnCLI;
 
