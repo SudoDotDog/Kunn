@@ -5,7 +5,7 @@
  * @override
  */
 
-import { Kunn } from "@kunn/core";
+import { Kunn, KunnConfig } from "@kunn/core";
 import * as __SudooIO from "@sudoo/io";
 import { Mock, Sandbox } from "@sudoo/mock";
 import { expect } from "chai";
@@ -24,16 +24,16 @@ describe('Given [Read] helper method', (): void => {
         const stack = Sandbox.create();
         const mock = Mock.create(__SudooIO, 'recursiveRead');
 
-        mock.mock(stack.func({
-            [key]: value,
-        }));
+        const kunnConfig: KunnConfig = {
+            version: 1,
+            routes: [],
+        };
+        mock.mock(stack.func(kunnConfig));
 
         const config: Kunn = await fromConfig(chance.string());
 
         mock.restore();
 
-        expect(config.config).to.be.deep.equal({
-            [key]: value,
-        });
+        expect(config.config).to.be.deep.equal(kunnConfig);
     });
 });
