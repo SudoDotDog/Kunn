@@ -18,7 +18,7 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
         coco.command(Command
             .create('typescript')
             .argument(Argument.create('config'))
-            .option(Option.create('o').setName('out'))
+            .option(Option.create('o').setName('out').required())
             .then(async (inputs: Record<string, string>): Promise<void> => {
 
                 const kunn: Kunn = await fromConfig(inputs.config);

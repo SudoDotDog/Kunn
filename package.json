@@ -24,7 +24,7 @@
     "@kunn/go": "^0.0.1",
     "@kunn/typescript": "^0.0.1",
     "@sudoo/bark": "^2.6.1",
-    "@sudoo/coco": "^1.7.1",
+    "@sudoo/coco": "^1.8.0",
     "@sudoo/io": "^1.6.0",
     "connor": "^2.4.0"
   },
