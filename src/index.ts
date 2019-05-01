@@ -5,7 +5,7 @@
  */
 
 import Kunn from "@kunn/core";
-import { Argument, Coco, Command, createInfoCommand } from "@sudoo/coco";
+import { Argument, Coco, Command, createInfoCommand, Option } from "@sudoo/coco";
 import { fromConfig } from "./config/read";
 
 export const KunnCLI = async (args: string[]): Promise<void> => {
@@ -18,9 +18,11 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
         coco.command(Command
             .create('typescript')
             .argument(Argument.create('config'))
+            .option(Option.create('o').setName('out'))
             .then(async (inputs: Record<string, string>): Promise<void> => {
 
                 const kunn: Kunn = await fromConfig(inputs.config);
+
                 console.log(kunn);
             }));
 
