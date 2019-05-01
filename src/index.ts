@@ -9,8 +9,8 @@ import { generateGoLangGesture } from "@kunn/go";
 import { generateTypeScriptGesture } from "@kunn/typescript";
 import { Argument, Coco, Command, createInfoCommand, Option } from "@sudoo/coco";
 import { writeTextFile } from "@sudoo/io";
-import * as Path from "path";
 import { fromConfig } from "./config/read";
+import { parseTargetPath } from "./generator/util";
 
 export const KunnCLI = async (args: string[]): Promise<void> => {
 
@@ -29,7 +29,7 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
                 const kunn: Kunn = await fromConfig(inputs.config);
                 const definition: string = kunn.routes().map((route: KunnRoute) => generateTypeScriptGesture(route)).join('\n');
 
-                await writeTextFile(Path.resolve(inputs.out), definition);
+                await writeTextFile(parseTargetPath(inputs.out, 'd.ts'), definition);
             }));
 
         coco.command(Command
@@ -41,7 +41,7 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
                 const kunn: Kunn = await fromConfig(inputs.config);
                 const definition: string = kunn.routes().map((route: KunnRoute) => generateGoLangGesture(route)).join('\n');
 
-                await writeTextFile(Path.resolve(inputs.out), definition);
+                await writeTextFile(parseTargetPath(inputs.out, 'go'), definition);
             }));
 
         await coco.go(args);
