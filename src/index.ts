@@ -5,6 +5,7 @@
  */
 
 import Kunn, { KunnRoute } from "@kunn/core";
+import { generateGoLangGesture } from "@kunn/go";
 import { generateTypeScriptGesture } from "@kunn/typescript";
 import { Argument, Coco, Command, createInfoCommand, Option } from "@sudoo/coco";
 import { writeTextFile } from "@sudoo/io";
@@ -30,10 +31,26 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
                 await writeTextFile(Path.resolve(inputs.out), definition);
             }));
 
+        coco.command(Command
+            .create('go')
+            .argument(Argument.create('config'))
+            .option(Option.create('o').setName('out').required())
+            .then(async (inputs: Record<string, string>): Promise<void> => {
+
+                const kunn: Kunn = await fromConfig(inputs.config);
+                const definition: string = kunn.routes().map((route: KunnRoute) => generateGoLangGesture(route)).join('\n');
+
+                await writeTextFile(Path.resolve(inputs.out), definition);
+            }));
+
         await coco.go(args);
     } catch (error) {
 
-        console.log(error);
+        if (process.env.NODE_ENV === 'development') {
+            console.log(error);
+        } else {
+            console.log(error.message);
+        }
     }
 };
 

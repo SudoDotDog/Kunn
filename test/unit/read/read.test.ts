@@ -18,9 +18,6 @@ describe('Given [Read] helper method', (): void => {
 
     it('should be able to read config file', async (): Promise<void> => {
 
-        const key: string = chance.string();
-        const value: string = chance.string();
-
         const stack = Sandbox.create();
         const mock = Mock.create(__SudooIO, 'recursiveRead');
 
