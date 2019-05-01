@@ -3,10 +3,28 @@
     "protocol": "GET",
     "request": {
         "query": {
-            "info": "STRING"
+            "info": {
+                "type": "ARRAY",
+                "element": {
+                    "type": "FLOAT"
+                }
+            }
         },
         "response": {
-            "world": "STRING"
+            "world": {
+                "type": "OBJECT",
+                "map": {
+                    "first": {
+                        "type": "INTEGER"
+                    },
+                    "second": {
+                        "type": "ARRAY",
+                        "element": {
+                            "type": "STRING"
+                        }
+                    }
+                }
+            }
         }
     }
 }]

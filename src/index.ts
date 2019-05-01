@@ -4,8 +4,11 @@
  * @description Index
  */
 
-import Kunn from "@kunn/core";
+import Kunn, { KunnRoute } from "@kunn/core";
+import { generateTypeScriptGesture } from "@kunn/typescript";
 import { Argument, Coco, Command, createInfoCommand, Option } from "@sudoo/coco";
+import { writeTextFile } from "@sudoo/io";
+import * as Path from "path";
 import { fromConfig } from "./config/read";
 
 export const KunnCLI = async (args: string[]): Promise<void> => {
@@ -22,8 +25,9 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
             .then(async (inputs: Record<string, string>): Promise<void> => {
 
                 const kunn: Kunn = await fromConfig(inputs.config);
+                const definition: string = kunn.routes().map((route: KunnRoute) => generateTypeScriptGesture(route)).join('\n');
 
-                console.log(kunn);
+                await writeTextFile(Path.resolve(inputs.out), definition);
             }));
 
         await coco.go(args);

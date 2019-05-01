@@ -7,10 +7,15 @@
             "protocol": "GET",
             "request": {
                 "query": {
-                    "info": "STRING"
+                    "info": {
+                        "type": "STRING",
+                        "optional": true
+                    }
                 },
                 "response": {
-                    "hello": "STRING"
+                    "hello": {
+                        "type": "STRING"
+                    }
                 }
             }
         }
