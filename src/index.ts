@@ -19,6 +19,7 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
         const coco: Coco = Coco.create();
 
         coco.command(createInfoCommand('help', coco, console.log));
+
         coco.command(Command
             .create('typescript')
             .argument(Argument.create('config'))
