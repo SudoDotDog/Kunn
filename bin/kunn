@@ -1,3 +1,4 @@
 #!/usr/bin/env node
+
 const kunn = require('./index.js').default;
 kunn(process.argv);
