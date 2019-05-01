@@ -34,10 +34,10 @@
   dependencies:
     "@sudoo/bark" "^2.6.1"
 
-"@kunn/typescript@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@kunn/typescript/-/typescript-0.0.1.tgz#9e6b1549f5a19e7d028727466b5ddcab4ecd6902"
-  integrity sha512-Hm9NJt6eZwm4AnvwErTroAG9xLTQBqPsgMokfRtHY56Gqax8+uNEO7iKTICYj61aBWOHXfEdKK33+zMfA4lNew==
+"@kunn/typescript@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@kunn/typescript/-/typescript-0.0.2.tgz#dc3354aa5a42f962b0ae63fd5e94988765cd8824"
+  integrity sha512-eMGqpxi69PA1Ny/IdY2REjVHHVOey5ZFEAR+Qzxwwc6BlcxrgcRIPMElU1fTASZtGW2cl7tbt98eNBeVbQLSxw==
   dependencies:
     "@sudoo/bark" "^2.6.1"
 

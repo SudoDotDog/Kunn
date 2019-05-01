@@ -14,7 +14,15 @@
                 },
                 "response": {
                     "hello": {
-                        "type": "STRING"
+                        "type": "ARRAY",
+                        "element": {
+                            "type": "OBJECT",
+                            "map": {
+                                "hello": {
+                                    "type": "STRING"
+                                }
+                            }
+                        }
                     }
                 }
             }
