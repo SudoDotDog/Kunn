@@ -20,8 +20,9 @@
   },
   "homepage": "https://github.com/SudoDotDog/Kunn#readme",
   "dependencies": {
-    "@kunn/core": "^0.0.3",
+    "@kunn/core": "^0.1.1",
     "@kunn/go": "^0.0.1",
+    "@kunn/server": "^0.0.1",
     "@kunn/typescript": "^0.1.0",
     "@sudoo/bark": "^2.6.1",
     "@sudoo/coco": "^1.8.0",

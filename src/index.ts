@@ -6,9 +6,11 @@
 
 import Kunn, { KunnRoute } from "@kunn/core";
 import { generateGoLangGesture } from "@kunn/go";
+import { createKunnServer } from "@kunn/server";
 import { generateTypeScriptGesture } from "@kunn/typescript";
 import { Argument, Coco, Command, createInfoCommand, Option } from "@sudoo/coco";
 import { writeTextFile } from "@sudoo/io";
+import { createServer } from "http";
 import { fromConfig } from "./config/read";
 import { parseTargetPath } from "./generator/util";
 
@@ -42,6 +44,17 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
                 const definition: string = kunn.routes().map((route: KunnRoute) => generateGoLangGesture(route)).join('\n');
 
                 await writeTextFile(parseTargetPath(inputs.out, 'go'), definition);
+            }));
+
+        coco.command(Command
+            .create('serve')
+            .argument(Argument.create('config'))
+            .then(async (inputs: Record<string, string>): Promise<void> => {
+
+                const kunn: Kunn = await fromConfig(inputs.config);
+                const server = createKunnServer(kunn);
+
+                createServer(server).listen(8000);
             }));
 
         await coco.go(args);
