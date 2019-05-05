@@ -1,6 +1,6 @@
 {
   "name": "kunn",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": ":dolphin: Interfacing, between people, between machine",
   "main": "index.js",
   "repository": {
