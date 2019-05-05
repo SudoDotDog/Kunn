@@ -17,11 +17,17 @@ yarn global add kunn
 
 ## Usage
 
-To generate type defination
+To generate type definition
 
 ```sh
 kunn typescript <...path to config file> -o <...path to output file> # Typescript .d.ts file
 kunn go <...path to config file> -o <...path to output file> # GoLang .go file
+```
+
+To host development server
+
+```sh
+kunn serve <...path to config file>
 ```
 
 ## Development
