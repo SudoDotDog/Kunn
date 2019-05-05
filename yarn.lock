@@ -34,13 +34,14 @@
   dependencies:
     "@sudoo/bark" "^2.6.1"
 
-"@kunn/server@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@kunn/server/-/server-0.0.1.tgz#cb84a4bf152395a34e592ec60a508618bd281d56"
-  integrity sha512-B0GBRIEHxvH+W6dbBGS/M/nR1IkarvyWxHpTiLOJYntw4c9doQ2VR5T8DDWwY75aBd1vyqV1CE253aw6l22Jig==
+"@kunn/server@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@kunn/server/-/server-1.0.0.tgz#5d93d50edf99f73a41a34d3c183d339d66a21df1"
+  integrity sha512-G/AqeAUlT+dOyCZaXGCbXqlsHsl03w6db44YXEkrQJeHP/BR9wHWyvlIKKkQlmWuPq8HbKM8T68+7uNvH4asYA==
   dependencies:
     "@kunn/core" "^0.1.1"
     "@sudoo/bark" "^2.6.1"
+    "@types/express" "^4.16.1"
     body-parser "^1.19.0"
     connor "^2.4.0"
     express "^4.16.4"
