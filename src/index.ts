@@ -52,7 +52,7 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
             .then(async (inputs: Record<string, string>): Promise<void> => {
 
                 const kunn: Kunn = await fromConfig(inputs.config);
-                const server = createKunnServer(kunn);
+                const server: any = createKunnServer(kunn);
 
                 createServer(server).listen(8000);
             }));
