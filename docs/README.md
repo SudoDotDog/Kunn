@@ -5,7 +5,7 @@
 [![npm version](https://badge.fury.io/js/kunn.svg)](https://www.npmjs.com/package/kunn)
 [![downloads](https://img.shields.io/npm/dm/kunn.svg)](https://www.npmjs.com/package/kunn)
 
-:dolphin: Interfacing, between people, between machine
+:dolphin: Interfacing
 
 ## Resources
 
