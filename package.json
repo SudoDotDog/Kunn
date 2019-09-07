@@ -1,7 +1,7 @@
 {
   "name": "kunn",
   "version": "1.0.0",
-  "description": ":dolphin: Interfacing, between people, between machine",
+  "description": ":dolphin: Interfacing",
   "main": "index.js",
   "repository": {
     "type": "git",
