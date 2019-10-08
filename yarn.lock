@@ -53,18 +53,18 @@
   dependencies:
     "@sudoo/bark" "^2.6.1"
 
-"@sudoo/bark@^2.5.1", "@sudoo/bark@^2.6.1", "@sudoo/bark@^2.7.1":
+"@sudoo/bark@^2.6.1", "@sudoo/bark@^2.7.1":
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/@sudoo/bark/-/bark-2.7.1.tgz#84b9db0be3aa7b4d6896ced81d9fa9aac96578ef"
   integrity sha512-0zBFbIQAtu3XNJkFPszdljYXXIPXzR63qypfTwFRupmu3gxgfBMtdPShbQebGuGG0KQEmXasGMBQVi2O0jWbbQ==
 
 "@sudoo/coco@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@sudoo/coco/-/coco-1.8.0.tgz#19ac0b67b85da51b9786fc65f9d04404613e605d"
-  integrity sha512-Rhkeydknd0/tGya/0yzQSsCoAvR1Yy5e02RXxHadjDam7lyUxw0fhdMwAiTu16EEnNejKJQqW8Tha6Qt1yPrcA==
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/@sudoo/coco/-/coco-1.8.3.tgz#e04de4f107ce4345c572431c07c15d28232d0dae"
+  integrity sha512-dfQ/hRt08T0jsM0kutXRWaZHVlWKSWPvZVdDugCqT9cBYdBF3Tf6xNzzXN5Bgy9Nn70MkBISGtiXkMLXVQcdEg==
   dependencies:
-    "@sudoo/bark" "^2.5.1"
-    connor "^2.4.0"
+    "@sudoo/bark" "^2.7.1"
+    connor "^2.6.0"
 
 "@sudoo/io@^1.6.1":
   version "1.6.1"
