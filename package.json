@@ -25,13 +25,13 @@
     "@kunn/server": "^1.0.1",
     "@kunn/typescript": "^0.1.0",
     "@sudoo/bark": "^2.7.1",
-    "@sudoo/coco": "^1.8.0",
+    "@sudoo/coco": "^1.8.3",
     "@sudoo/io": "^1.6.1",
     "connor": "^2.6.0"
   },
   "devDependencies": {
     "@sudoo/mock": "^1.2.0",
-    "@sudoo/triforce": "^1.8.3"
+    "@sudoo/triforce": "^1.9.0"
   },
   "nyc": {
     "extension": [
