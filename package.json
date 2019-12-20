@@ -25,9 +25,9 @@
     "@kunn/server": "^1.0.1",
     "@kunn/typescript": "^0.1.0",
     "@sudoo/bark": "^2.7.1",
-    "@sudoo/coco": "^1.8.3",
+    "@sudoo/coco": "^1.8.4",
     "@sudoo/io": "^1.6.1",
-    "connor": "^2.6.0"
+    "connor": "^2.6.1"
   },
   "devDependencies": {
     "@sudoo/mock": "^1.2.0",
