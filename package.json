@@ -20,18 +20,18 @@
   },
   "homepage": "https://github.com/SudoDotDog/Kunn#readme",
   "dependencies": {
-    "@kunn/core": "^0.1.1",
+    "@kunn/core": "^0.2.0",
     "@kunn/go": "^0.0.1",
     "@kunn/server": "^1.0.1",
     "@kunn/typescript": "^0.1.0",
-    "@sudoo/bark": "^2.7.1",
+    "@sudoo/bark": "^2.7.2",
     "@sudoo/coco": "^1.8.4",
-    "@sudoo/io": "^1.6.1",
-    "connor": "^2.6.1"
+    "@sudoo/io": "^1.6.2",
+    "connor": "^2.7.0"
   },
   "devDependencies": {
     "@sudoo/mock": "^1.2.0",
-    "@sudoo/triforce": "^2.0.4"
+    "@sudoo/triforce": "^2.1.0"
   },
   "nyc": {
     "extension": [
