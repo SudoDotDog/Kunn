@@ -27,6 +27,15 @@
     chance "^1.0.18"
     connor "^2.4.0"
 
+"@kunn/core@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@kunn/core/-/core-0.2.0.tgz#8a275215c484ed3f6e37f3ed81d6c82e3f426979"
+  integrity sha512-UBuHLTPv8uyPRpypmuVbGvvEwjH3Up5U0QUdbsGK+Sl9NHt450Wh5lwrdqhkoAU1IEnfHNgql2z2xRauSe60oQ==
+  dependencies:
+    "@sudoo/bark" "^2.7.2"
+    chance "^1.1.4"
+    connor "^2.7.0"
+
 "@kunn/go@^0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@kunn/go/-/go-0.0.1.tgz#e8e7c674d6567c247347c6fe5c2f22141c143e20"
@@ -53,10 +62,10 @@
   dependencies:
     "@sudoo/bark" "^2.6.1"
 
-"@sudoo/bark@^2.6.1", "@sudoo/bark@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@sudoo/bark/-/bark-2.7.1.tgz#84b9db0be3aa7b4d6896ced81d9fa9aac96578ef"
-  integrity sha512-0zBFbIQAtu3XNJkFPszdljYXXIPXzR63qypfTwFRupmu3gxgfBMtdPShbQebGuGG0KQEmXasGMBQVi2O0jWbbQ==
+"@sudoo/bark@^2.6.1", "@sudoo/bark@^2.7.1", "@sudoo/bark@^2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@sudoo/bark/-/bark-2.7.2.tgz#961c4b482dbc00d7c762607c63f7a3eaa8f8811e"
+  integrity sha512-COaH8iYTyutU0bgqhklIQShops+NYHRlCb+XEXkMimlkQuiw2dUY6yATSyiq89vIy74W39FAs/FgHAG4+aJVKA==
 
 "@sudoo/coco@^1.8.4":
   version "1.8.4"
@@ -277,7 +286,7 @@ chalk@^2.0.0, chalk@^2.3.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chance@1.1.4, chance@^1.0.18:
+chance@1.1.4, chance@^1.0.18, chance@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/chance/-/chance-1.1.4.tgz#d8743bf8e40bb05e024c305ca1ff441195eb23db"
   integrity sha512-pXPDSu3knKlb6H7ahQfpq//J9mSOxYK8SMtp8MV/nRJh8aLRDIl0ipLH8At8+nVogVwtvPZzyIzY/EbcY/cLuQ==
@@ -314,10 +323,10 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
-connor@^2.4.0, connor@^2.6.0, connor@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/connor/-/connor-2.6.1.tgz#a25bdd3c84a2b79325496e5d18de68be81da5481"
-  integrity sha512-V2RiLFaZoDIy1GAXoD7I57c90xVWlgRewMGLyRHhMAMmopHzSnDm2EswUj0n5CdEAxHld6/RI+sxUgUquXftyQ==
+connor@^2.4.0, connor@^2.6.0, connor@^2.6.1, connor@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/connor/-/connor-2.7.0.tgz#b2f04d86c516ba0dcc37dd87c0b80465c89e5f27"
+  integrity sha512-HzaNDJ1KI0vPz/O3ZlVQc2ZFu14GetTp7eQ/5gZ1PFyr7ovMPXsu0AujBzXgiQu162p3UCyFZbnAHY6KS3x8jA==
 
 content-disposition@0.5.3:
   version "0.5.3"
