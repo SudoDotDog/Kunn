@@ -22,7 +22,7 @@
   "dependencies": {
     "@kunn/core": "^0.2.0",
     "@kunn/go": "^0.0.1",
-    "@kunn/server": "^1.0.1",
+    "@kunn/server": "^1.0.2",
     "@kunn/typescript": "^0.1.0",
     "@sudoo/bark": "^2.7.2",
     "@sudoo/coco": "^1.8.4",

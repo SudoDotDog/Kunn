@@ -18,15 +18,6 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@kunn/core@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@kunn/core/-/core-0.1.1.tgz#5363526200c6d0099fdfe64fd7bf79d02fa2dd60"
-  integrity sha512-YSd7VkgL7bbfZ8eZX4aS94aNQ7yakjkeC6u2HJPoCTOnesbBbZBXkEK+Ssn5IJZcUgVqKe/adU0JuSQu5xlz/A==
-  dependencies:
-    "@sudoo/bark" "^2.6.1"
-    chance "^1.0.18"
-    connor "^2.4.0"
-
 "@kunn/core@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@kunn/core/-/core-0.2.0.tgz#8a275215c484ed3f6e37f3ed81d6c82e3f426979"
@@ -43,17 +34,17 @@
   dependencies:
     "@sudoo/bark" "^2.6.1"
 
-"@kunn/server@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@kunn/server/-/server-1.0.1.tgz#199c307dca7f1faa2feffa86f5097c4fa81c5012"
-  integrity sha512-QXVUSmOetu86oLAs1Xpp9y1uahvIV6TfK7YOQH3RyrrQcR4OjSQuU02ymDFk9K3GdBeRW0PlVLOdfVrnJ3R0FA==
+"@kunn/server@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@kunn/server/-/server-1.0.2.tgz#2ae6364a8ddd485bb7030ea530721cb6d471e82d"
+  integrity sha512-7H3pYq1vR2kDu2BIIHW/pzlx1jwdujni9xNtJEf8hZGbpgNcAetUH/2NT7ojXSkDsfxeSexyWvay1cMFb0RBGg==
   dependencies:
-    "@kunn/core" "^0.1.1"
-    "@sudoo/bark" "^2.6.1"
-    "@types/express" "^4.16.1"
+    "@kunn/core" "^0.2.0"
+    "@sudoo/bark" "^2.7.2"
+    "@types/express" "^4.17.2"
     body-parser "^1.19.0"
-    connor "^2.4.0"
-    express "^4.16.4"
+    connor "^2.7.0"
+    express "^4.17.1"
 
 "@kunn/typescript@^0.1.0":
   version "0.1.0"
@@ -142,7 +133,7 @@
     "@types/node" "*"
     "@types/range-parser" "*"
 
-"@types/express@^4.16.1":
+"@types/express@^4.17.2":
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.2.tgz#a0fb7a23d8855bac31bc01d5a58cadd9b2173e6c"
   integrity sha512-5mHFNyavtLoJmnusB8OKJ5bshSzw+qkMIBAobLrIM48HJvunFva9mOa6aBwh64lBFyNwBbs0xiEFuj4eU/NjCA==
@@ -286,7 +277,7 @@ chalk@^2.0.0, chalk@^2.3.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chance@1.1.4, chance@^1.0.18, chance@^1.1.4:
+chance@1.1.4, chance@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/chance/-/chance-1.1.4.tgz#d8743bf8e40bb05e024c305ca1ff441195eb23db"
   integrity sha512-pXPDSu3knKlb6H7ahQfpq//J9mSOxYK8SMtp8MV/nRJh8aLRDIl0ipLH8At8+nVogVwtvPZzyIzY/EbcY/cLuQ==
@@ -323,7 +314,7 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
-connor@^2.4.0, connor@^2.6.1, connor@^2.7.0:
+connor@^2.6.1, connor@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/connor/-/connor-2.7.0.tgz#b2f04d86c516ba0dcc37dd87c0b80465c89e5f27"
   integrity sha512-HzaNDJ1KI0vPz/O3ZlVQc2ZFu14GetTp7eQ/5gZ1PFyr7ovMPXsu0AujBzXgiQu162p3UCyFZbnAHY6KS3x8jA==
@@ -426,7 +417,7 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-express@^4.16.4:
+express@^4.17.1:
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
   integrity sha512-mHJ9O79RqluphRrcw2X/GTh3k9tVv8YcoyY4Kkh4WDMUYKRZUq0h1o0w2rrrxBqM7VoeUVqgb27xlEMXTnYt4g==

@@ -54,6 +54,7 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
                 const kunn: Kunn = await fromConfig(inputs.config);
                 const server: any = createKunnServer(kunn);
 
+                // tslint:disable-next-line: no-magic-numbers
                 createServer(server).listen(8000);
             }));
 
@@ -68,4 +69,5 @@ export const KunnCLI = async (args: string[]): Promise<void> => {
     }
 };
 
+// tslint:disable-next-line: no-default-export
 export default KunnCLI;
