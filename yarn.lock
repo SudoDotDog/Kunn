@@ -58,27 +58,27 @@
   resolved "https://registry.yarnpkg.com/@sudoo/bark/-/bark-2.7.2.tgz#961c4b482dbc00d7c762607c63f7a3eaa8f8811e"
   integrity sha512-COaH8iYTyutU0bgqhklIQShops+NYHRlCb+XEXkMimlkQuiw2dUY6yATSyiq89vIy74W39FAs/FgHAG4+aJVKA==
 
-"@sudoo/coco@^1.8.4":
+"@sudoo/coco@^1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@sudoo/coco/-/coco-1.8.5.tgz#35476265ea539889dd5694484fb375afbc1970bc"
   integrity sha512-M+7fTfr9RhijZsODutrG3TXOKoHaE4E6AEi0+36m+4J7K0jRGU7BMicK0EWqYsesbp6Vp/zEu2sueUTisor6zg==
   dependencies:
     connor "^2.7.0"
 
-"@sudoo/io@^1.6.2":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@sudoo/io/-/io-1.7.0.tgz#80245407254634430939c881d63d8b9cc5f829c9"
-  integrity sha512-/nup9wyKqwPtNS/KX1HeBOnrLWYtGfHmDBCtpUYfe3V6n9oCvwddiUzLzJWXOB/ZhwdphkJGuuMvjhYBnRFuNQ==
+"@sudoo/io@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@sudoo/io/-/io-1.8.0.tgz#bc57ae7ed0d76797415c1aab9cc7ea7857c3e46e"
+  integrity sha512-Gvfx9SnCiZSQO6F0gIZzNMSjJWqr/zWfofJIa0TOc/OIdNgQ9wGyS69wWFXgdtQVvWNXYDjw+efwZmlH2i9VrA==
   dependencies:
     "@sudoo/bark" "^2.7.2"
     connor "^2.7.0"
 
-"@sudoo/mock@^1.2.0":
+"@sudoo/mock@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@sudoo/mock/-/mock-1.3.0.tgz#84e8c26724b74045539d26a2c1673ab1c08de6c7"
   integrity sha512-ufWn6iRX3J5Q/3kyGUaku5BAe73QxofTosmdIyn397OtUI0NFQ/luGBFlG3af7Y4oR1f6LEOVI8n7fIYiw8Neg==
 
-"@sudoo/triforce@^2.1.0":
+"@sudoo/triforce@^2.4.1":
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@sudoo/triforce/-/triforce-2.4.1.tgz#3a93096e03440e3cbf8369a8f1d7a7d3c338900f"
   integrity sha512-sMpjU+bPrCBTg2l8shQK7l7ZhlHS+ZXEkFJjRkBNOknwhw4NXtxHAvUqtpeEi0/xBum3Aul+Bj1EgeNMosfZ+g==
