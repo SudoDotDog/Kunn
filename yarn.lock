@@ -141,9 +141,9 @@
   integrity sha512-Sbmr3zZtbIefGXhAH6+zWPreBx5Zriq7No7OxMDIjNTPKk0mRHEN+qp/WTH3EAXcjaKHqJd4eV/9gMO4PJLXvg==
 
 "@sudoo/mock@^1.3.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@sudoo/mock/-/mock-1.4.0.tgz#b1b2447204d135cf3d873f608a609d68d8e47056"
-  integrity sha512-XAsikIIem1ymZR8KCTjNs5lnYoGzJtBP12xQzjPUWQrk4IUl9qQEjsU8LHLBHReNtvGws5Y7g5rnbhwNSdhJ7w==
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@sudoo/mock/-/mock-1.5.0.tgz#6c76cd59f47f76a9642c5022cef6f5abde9f6567"
+  integrity sha512-bqgk2SwoO/qhZy8tprgqPdjyDSGlt8JCcrARG6DSGnFtqr3CVF2+Yu4CJzV/P70YYYocoE77ueDSyEyIJJ0CHA==
 
 "@sudoo/triforce@^2.4.1":
   version "2.8.6"
